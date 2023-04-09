@@ -10,7 +10,7 @@ const euro = 5.9
 const convertValues = () => {
     const inputReal = document.getElementById('input-real').value //pega o input real
     const realValueText = document.getElementById('real-value-text') //pega o input digitado
-    const currencyValueText = document.getElementById('currency-value-text') //pega o input dolar
+    const currencyValueText = document.getElementById('currency-value-text') //pega o input dolar 
 
 
     //forma atual de formatar o tipo de dinheiro em real
