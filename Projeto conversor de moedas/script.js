@@ -3,7 +3,7 @@ const select = document.getElementById('currency-select');
 
 const dolar = 5.2
 const euro = 5.9
-
+const bitcoin = 0.0000070
 
 
 //funcao que é acionada quando o botão é clicado
@@ -35,6 +35,14 @@ const convertValues = () => {
             currency: "EUR",
         }).format(inputReal / euro);
     }
+
+    if (select.value === "Bitcoin") {
+        //BITCOIN => conversao para bitcoin => forma atual de formatar o tipo de dinheiro em bitcoin
+        currencyValueText.innerHTML = new Intl.NumberFormat("pt-BR", {
+            style: "currency",
+            currency: "BTC",
+        }).format(inputReal * bitcoin);
+    }
 }
 
 //funcao que muda os elementos de acordo com a option selecionada
@@ -52,6 +60,12 @@ const changeCurrency = () => {
     //condicao que muda os elementos se o select for "euro"
     if (select.value === '$ Euro') {
         currencyName.innerHTML = "Euro"
+        currencyImg.src = "./assets/euro.png"
+    }
+
+     //condicao que muda os elementos se o select for "bitcoin"
+     if (select.value === 'Bitcoin') {
+        currencyName.innerHTML = "Bitcoin"
         currencyImg.src = "./assets/euro.png"
     }
     convertValues()
