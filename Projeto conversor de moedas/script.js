@@ -3,7 +3,7 @@ const select = document.getElementById('currency-select');
 
 const dolar = 5.2
 const euro = 5.9
-const bitcoin = 0.0000070
+const bitcoin = 141835.09
 
 
 //funcao que é acionada quando o botão é clicado
@@ -41,7 +41,7 @@ const convertValues = () => {
         currencyValueText.innerHTML = new Intl.NumberFormat("pt-BR", {
             style: "currency",
             currency: "BTC",
-        }).format(inputReal * bitcoin);
+        }).format(inputReal / bitcoin);
     }
 }
 
