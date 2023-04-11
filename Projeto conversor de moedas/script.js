@@ -66,7 +66,7 @@ const changeCurrency = () => {
      //condicao que muda os elementos se o select for "bitcoin"
      if (select.value === 'Bitcoin') {
         currencyName.innerHTML = "Bitcoin"
-        currencyImg.src = "./assets/euro.png"
+        currencyImg.src = "./assets/bitcoin.png"
     }
     convertValues()
 }
